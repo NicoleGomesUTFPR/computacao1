@@ -1,1 +1,24 @@
-escreva("ALÔ, CODEBERG")
+//Declaração
+var nome: texto = "Nicole"
+var ano_de_nascimento: inteiro = 2006
+var salario: real = 10.000
+var usa_oculos: logico = falso
+var resposta: texto 
+var idade: inteiro  = (2026 - ano_de_nascimento)
+
+resposta = leia("Você usa óculos? Responda V ou F")
+
+se (resposta=='V'){
+   usa_oculos = verdadeiro
+} 
+
+se (usa_oculos) {
+    escreva('Que pena! Você usa óculos');
+} senao {
+    escreva('Que bom! Você não usa óculos')}
+
+
+nome = leia ("digite seu nome")
+ano_de_nascimento = inteiro(leia ("digite seu ano de nascimento"))
+salario = real(leia ("Qual o valor do seu salário?"))
+idade = inteiro(leia("digite sua idade")) 
