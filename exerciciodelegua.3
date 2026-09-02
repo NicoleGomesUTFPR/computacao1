@@ -1,0 +1,34 @@
+var contador: inteiro = 0
+var maiorMedia: real = -1
+
+var nomeMaiorMedia: texto = ''
+var nome: texto = ''
+var nota1: real = 0
+var nota2: real = 0
+var media: real = 0
+enquanto (contador < 10 e nota1 >= 0 e nota2 >= 0) {
+    escreva('Digite o nome do aluno:')
+    nome = leia()
+    escreva('Digite a nota 1')
+    nota1 = real(leia())
+    escreva('Digite a nota 2')
+    nota2 = real(leia())
+}
+// Cálculo de média ponderada (peso 2 e peso 3)
+se (nota1 >= 0 e nota2 >= 0) {
+    media = (nota1 * 2 + nota2 * 3) / 5
+    se (media >= 6) {
+        escreva(nome + ', você foi aprovado')
+    } senão {
+        escreva('Lamento, ' + nome + ', mas você foi reprovado')
+    }
+    se (media > maiorMedia) {
+        maiorMedia = media
+        nomeMaiorMedia = nome
+    }
+    contador = contador + 1
+}
+se (nomeMaiorMedia != '') {
+    escreva('Aluno com a maior média: ' + nomeMaiorMedia)
+    escreva('Maior média: ' + texto(maiorMedia))
+}
