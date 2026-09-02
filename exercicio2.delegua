@@ -3,20 +3,17 @@ var tentativas: inteiro = 0
 var soma: inteiro = 0
 var acertou = falso
 var chute = 0
-enquanto (tentativas < 10 e acertou
+escreva("O número sorteado foi: ", numeroAleatorio)
+enquanto (tentativas < 10 e (nao acertou)) {
+    chute = inteiro(leia("Digite seu palpite (ou -1 para sair):"))
+    se (chute != -1
 ) {
-    escreva("Digite seu palpite (ou -1 para sair):")
-    chute = inteiro(leia())
-    se (chute == -1
-) {
-        sustar
-    }
-    tentativas = tentativas + 1
-    soma = soma + chute
-    se (chute == numeroAleatorio) {
-        escreva('Parabéns, você acertou!')
-        acertou = verdadeiro
-        sustar
+        tentativas = tentativas + 1
+        soma = soma + chute
+        se (chute == numeroAleatorio) {
+            escreva('Parabéns, você acertou!')
+            acertou = verdadeiro
+        }
     }
 }
 escreva('Quantidade de valores lidos:' + texto(tentativas))
@@ -24,4 +21,3 @@ se (tentativas > 0) {
     var media = soma / tentativas
     escreva('Média dos valores lidos:' + texto(media))
 }
-
